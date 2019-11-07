@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Loops</title>
+</head>
+<body>
+	<body style="text-align: center; background-color: lightblue;">
+    <h1>FizzBuzz</h1>
+    <div id="page" style="text-align: center;"> 
+	<script> 
+  		var x;
+ 	 	for (var i=1; i<=100; i++) {
+    	if (i % 3 === 0 && i % 5 === 0) {
+      		x="fizzbuzz \n"
+      		document.write(x);
+    	} else if (i % 3 === 0) {
+        	document.write("Fizz \n");
+    	} else if (i % 5 === 0) {
+      		document.write("Buzz \n");
+    	} else {
+        	document.write(i + "\n");
+    	}
+	}  
+			
+	</script>
+</div>
+</body>
+</html>
