@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Romeinse cijfers converteren</title>
+</head>
+<body>
+	<div class="main">
+		<h1>Romeinse cijfers converter</h1>
+		<p id="159"></p>
+		<p id="296"></p>
+		
+	</div>
+
+	<script>
+		function int_to_roman(num) {
+			if (typeof num !== 'number')
+				return false;
+
+			var digits = String(+num).split(""),
+			key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM","","X","XX","XXX","XL","L","LX","LXX","LXXX","XC","","I","II","III","IV","V","VI","VII","VIII","IX"]
+			roman_num = "",
+			i = 3;
+			while (i--)
+				roman_num = (key[+digits.pop() + (i * 10)] || "") + roman_num;
+			return Array(+digits.join("") + 1).join("M") + roman_num;
+		}
+
+		console.log(int_to_roman(159));
+		document.write(int_to_roman(159)); 
+
+		console.log(int_to_roman(296))
+		document.write("<br>"+int_to_roman(296));
+
+		console.log(int_to_roman(3992))
+		document.write("<br>"+int_to_roman(3992));
+
+	</script>
+</body>
+</html>
