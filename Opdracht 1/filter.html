@@ -6,30 +6,22 @@
 </head>
 	<body>
   		<h1>Wat een lelijke tekst</h1> 
-          
-        <p>Hello#521paddawan2==)
-        	Today---you0[]learn.,.-important.stuff
-        	*&Episode238I(&
-        	#$--THE33PHANTOM]}]MENACE[[
-        	&^%$Turmoil32<<has!-engulfed#2the:
-        	))-Galactic-3-0Republic.2€The8&&taxation
-        	@)of#)#trade^@#*routes{}to}}[outlying239{star
-        	13-systems%%$is@%^in!235%dispute.23
-        	,Hoping>#to81*resolve*--_the(-)matter*!*#
-			with??a??.blockade;\;of*&^*deadly??
-			battleships,@#%99the158*greedy%@*)Trade]}0-
-			Federation@#%3has@#@%3"stopped>?>all<#4
-			shipping9(8to(*&the&&$small$!@planet$#*
-			#@#T&of!?Naboo.$
-			While38*the-Congress==+of#&&@the!#@
-			Republic$@:;endlessly?%#debates|}[
-			this235#%$^alarming_()8chain&)(@$of*&events,3
-			{[{--the0Supreme--=+Chancellor+09*has]
-			secretly@#]dispatched!!two%%$Jedi%:;
-			Knights,%the::guardians*&of+-
-			peace()and][3justice)&^}in@{the^}$
-			galaxy,8to##settle%@the@#%conflict...."</p>
+      <script>
+      	var openFile = function(event) {
+      		var input = event.target;
 
+      		var reader = new FileReader();
+      		reader.onload = function() {
+      			var text = reader.result;
+      			var node = ('input');
+      			node.innerText = text;
+      			console.log(reader.result.substring(0, 200));
+      		};
+      		reader.readAsText(input.files[0]);
+      	};
+
+      </script>
+			<input type="file" accept="input.txt" onchange="openFile(event)"><br><div id="input"></div>
 			<p id="klik">klik op de knop</p>
 
 			<input type="button" value="click " onclick="tekst()">  
