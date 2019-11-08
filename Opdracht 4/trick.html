@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var openFile = function(event) {
+			var input = event.target;
+
+			var reader = new FileReader();
+			reader.onload = function() {
+				var text = reader.result;
+				var node = ('input');
+				node.innerText = text;
+				console.log(reader.result.substring(0, 200));
+				document.write(reader.result.substring(0, 200));
+			};
+			reader.readAsText(input.files[0]);
+		};
+		
+	</script>
+
+	<input type="file" accept="input.txt" onchange="openFile(event)"><br><div id="input"></div>
+</body>
+</html>
